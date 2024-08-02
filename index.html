@@ -24,22 +24,35 @@
 </head>
 <body>
     <h2>Image Slider</h2>
-    <img src="./images/one.jpg" class="image">
+    <img src="./images/one.jpg" class="image" id=" img">
 
  <div class="btn">
     <button type="button" class="button" onclick="prev()">Prev</button>
     <button type="button" class="button" onclick="next()">Next</button>
 </div>
     <script>
-        const images = [
+        const imagesArr = [
             "./images/one.jpg",
             "./images/two.jpg",
             "./images/three.jpg",
             "./images/four.jpg",
             "./images/five.jpg"
-        ]
+        ];
 
         let imgIndex = 0;
+
+        function prev(){
+            if (imgIndex==0){
+                imgIndex = images.length - 1;
+            }
+            else{
+                imgIndex--;
+            }
+        }
+
+        const imgElement = document.getElementById('img');
+
+        imgElement.src=imagesArr[imgIndex];
     </script>
 </body>
 </html>
