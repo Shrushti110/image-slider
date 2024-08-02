@@ -10,18 +10,26 @@
             height: 200px;
             object-fit: fill;
             display:block ;
-            margin: auto;
+            margin: 20px auto;
             background-color: cadetblue;
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+        }
+        .button{
+            margin: 0 10px ;
         }
     </style>
 </head>
 <body>
     <h2>Image Slider</h2>
-    <img src="one.jpg" class="image">
+    <img src="./images/one.jpg" class="image">
 
-    <button>Prev</button>
-    <button>Next</button>
-
+ <div class="btn">
+    <button type="button" class="button" onclick="prev()">Prev</button>
+    <button type="button" class="button" onclick="next()">Next</button>
+</div>
     <script>
         const images = [
             "./images/one.jpg",
@@ -30,6 +38,8 @@
             "./images/four.jpg",
             "./images/five.jpg"
         ]
+
+        let imgIndex = 0;
     </script>
 </body>
 </html>
